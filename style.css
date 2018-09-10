@@ -7,11 +7,15 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 nav {
-    color: #f4e9d0;
-    height: 80px;
+    height: 140px;
+    background-image: url("grassPic.jpg");
+
+}
+.navcontainer {
+    color: #e9e1c2;
     margin: 0 auto;
-    width: 80vw;
-    border-bottom: solid #2e2033 2px;
+    width: 100vw;
+    border-bottom: solid #767296 2px;
 }
 .logo {
     font-size: 20px;
@@ -28,7 +32,7 @@ nav {
     display: inline-block;
     height: 50px;
     width: 70px;
-    border: 2px solid #2e2033;
+    border: 2px solid #767296;
     padding: 3px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
