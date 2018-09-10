@@ -6,3 +6,21 @@ body {
     background-color: #9bbab0;
     font-family: 'Josefin Sans', sans-serif;
 }
+nav {
+    color: #f4e9d0;
+    height: 80px;
+    margin: 10px;
+}
+.logo {
+    font-size: 20px;
+}
+.nav_links {
+    float: right;
+  }
+.nav_buttons {
+    display: inline-block;
+    height: 10vw;
+    width: 15vw;
+    border: 2px solid #2e2033;
+    padding: 3vw;
+}
