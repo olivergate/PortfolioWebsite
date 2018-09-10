@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 body {
-    margin: 0px;
+    margin: 0;
     background-color: #9bbab0;
-    width: 100%
+    font-family: 'Josefin Sans', sans-serif;
 }
