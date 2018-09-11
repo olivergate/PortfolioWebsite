@@ -6,10 +6,10 @@ body {
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color: #aca9a5;
+    background-color: #8d7e55;
 }
 nav {
     position: fixed;
-    /*overflow: auto;*/
     width: 100%;
     border-bottom: solid #4b3341 2px;
 }
@@ -18,7 +18,6 @@ nav {
     overflow: auto;
     margin: 0 auto;
     width: 95%;
-    /*height: 1em;*/
     padding: 20px;
 
     font-size: 100%;
