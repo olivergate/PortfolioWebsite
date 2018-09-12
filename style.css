@@ -7,6 +7,18 @@ a {
     text-decoration: inherit;
 }
 
+h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 5px;
+}
+
 body {
     margin: 0;
     font-size: 20px;
@@ -98,11 +110,14 @@ nav .buttons {
 
 .hero_statement {
     text-align: center;
-    width: 200px;
+    width: 380px;
     margin: 0 auto;
-    background-color: rgba(75,51,65,0.81);
     border-radius: 10px;
     margin-top: 30vh;
+    color: #1b222b;
+    background-color: rgba(255,255,255,0.50);
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .hero_statement p {
@@ -116,7 +131,9 @@ nav .buttons {
     margin-top: 25px;
     padding-top: 10px;
     font-size: 2.5rem;
+    color: #e9e1c2;
 }
+
 @media screen and (max-width: 808px) {
     nav {
         height: 140px;
