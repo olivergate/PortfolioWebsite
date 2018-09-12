@@ -22,24 +22,26 @@ p {
 body {
     margin: 0;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Italiana', serif;
     color: #aca9a5;
     background-color: #e9e1c2;
     height: 2000px;
 }
 
 nav {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100vw;
     margin: 0 auto;
     border-bottom: solid 2px #4b3341;
+    background-color: inherit;
 }
 
 .nav_container {
     color: #8d7e55;
     overflow: auto;
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     padding: 20px;
 
     font-size: 1rem;
@@ -59,7 +61,7 @@ nav {
 
 .logo {
     position: absolute;
-    left: 35px;
+    left: 10px;
     top: 110px;
     height: 8%;
     width: 8%;
@@ -87,33 +89,33 @@ nav .buttons {
 }
 
 .home_page {
-    background-image: url("BackgroundHome.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("BackgroundHome.jpg") no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: 786px;
+    padding: 200px;
 }
 
 .body_container {
-    width: 95%;
+    width: 70%;
     margin: 0 auto;
     min-width: 380px;
 }
 
-.home_page .body_container {
-    padding-top: 100px;
-}
+/*.home_page .body_container {*/
+    /*padding-top: 100px;*/
+/*}*/
 
 .buttons:hover {
     border-color: #4b3341;
 }
 
 .hero_statement {
+    font-size: 3rem;
+    font-family: 'Stalemate', cursive;
     text-align: center;
     width: 380px;
     margin: 0 auto;
     border-radius: 10px;
-    margin-top: 30vh;
     color: #1b222b;
     background-color: rgba(255,255,255,0.50);
     padding-top: 35px;
@@ -125,13 +127,45 @@ nav .buttons {
 }
 
 .home_page .buttons {
+    font-family: 'Italiana', serif;
     width: 25vw;
-    height: 70px;
+    height: 100px;
     margin: 0 auto;
     margin-top: 25px;
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 2.5rem;
     color: #e9e1c2;
+}
+
+.col70_col30 {
+    width:60%;
+    height: 768px;
+    display: inline-block;
+    overflow: auto
+}
+.col30_col70 {
+    width: 39%;
+    height: 768px;
+    display: inline-block;
+    overflow: auto;
+}
+
+.col30_col70 img {
+    height: 300px;
+    margin-left: 15px;
+    float: right;
+}
+
+.coding_langs {
+    overflow: auto;
+}
+
+.coding_langs img {
+    float:left;
+}
+
+main .body_container {
+    padding-top: 30px;
 }
 
 @media screen and (max-width: 808px) {
