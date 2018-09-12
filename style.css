@@ -23,9 +23,13 @@ body {
     margin: 0;
     font-size: 20px;
     font-family: 'Italiana', serif;
-    color: #aca9a5;
-    background-color: #e9e1c2;
+    color: #e9e1c2;
+    /*background-color: #e9e1c2;*/
     height: 2000px;
+}
+
+main {
+    height: 768px;
 }
 
 nav {
@@ -34,16 +38,15 @@ nav {
     width: 100vw;
     margin: 0 auto;
     border-bottom: solid 2px #4b3341;
-    background-color: inherit;
+    background-color: #e9e1c2;
 }
 
 .nav_container {
     color: #8d7e55;
     overflow: auto;
     margin: 0 auto;
-    width: 100%;
-    padding: 20px;
-
+    width: 90%;
+    padding: 10px;
     font-size: 1rem;
 }
 
@@ -80,6 +83,11 @@ nav .buttons {
     margin-top: 12px;
 }
 
+#about {
+    padding-top: 70px;
+    background-color: #9bbab0;
+}
+
 .buttons {
     text-align: center;
     padding: 12px 5px;
@@ -96,8 +104,9 @@ nav .buttons {
 }
 
 .body_container {
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin-left: 15%;
+    margin-right: 0;
     min-width: 380px;
 }
 
@@ -128,8 +137,7 @@ nav .buttons {
 
 .home_page .buttons {
     font-family: 'Italiana', serif;
-    width: 25vw;
-    height: 100px;
+    width: 40vw;
     margin: 0 auto;
     margin-top: 25px;
     padding-top: 20px;
@@ -148,6 +156,11 @@ nav .buttons {
     height: 768px;
     display: inline-block;
     overflow: auto;
+    padding-top: 15px;
+}
+
+.col30_col70 img {
+    border-radius: 10px;
 }
 
 .col30_col70 img {
@@ -167,6 +180,11 @@ nav .buttons {
 main .body_container {
     padding-top: 30px;
 }
+
+#portfolioId {
+   background-color: #4b3341;
+}
+
 
 @media screen and (max-width: 808px) {
     nav {
