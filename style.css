@@ -1,67 +1,76 @@
 * {
     box-sizing: border-box;
 }
+
 a {
     color: inherit;
     text-decoration: inherit;
 }
+
 body {
     margin: 0;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color: #aca9a5;
-    background-color: #8d7e55;
+    background-color: #e9e1c2;
     height: 2000px;
 }
+
 nav {
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
+    border-bottom: solid 2px #4b3341;
 }
+
 .nav_container {
     color: #8d7e55;
     overflow: auto;
     margin: 0 auto;
-    width: 95vw;
+    width: 95%;
     padding: 20px;
-    border-bottom: solid 2px #4b3341;
+
     font-size: 1rem;
 }
-.burgerselector {
-    /*Currently an ugly button, I know right But this will change for sure yo*/
+
+.burger_selector {
     height: 85px;
     width: 85px;
     display: none;
 }
+
 .logo_name {
     font-size: 1.25rem;
     float: left;
     margin-top: 25px;
 }
+
 .logo {
     position: absolute;
     left: 35px;
     top: 110px;
-    height: 8vw;
-    width: 8vw;
+    height: 8%;
+    width: 8%;
     min-width: 125px;
     min-height: 125px;
 }
+
 .nav_links {
     float: right;
   }
+
 .nav_buttons {
     display: inline-block;
     width: 100px;
     text-align: center;
     padding: 12px 5px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
     border-radius: 7px;
     margin-left: 20px;
     margin-top: 12px;
     overflow: auto;
     border: 2px solid transparent;
 }
+
 .home_page {
     background-image: url("BackgroundHome.jpg");
     background-repeat: no-repeat;
@@ -69,19 +78,35 @@ nav {
     background-size: cover;
     height: 100vh;
 }
-.bodycontainer {
-    width: 90vw;
-    margin: 0 auto;
-    min-width: 600px;
 
+.body_container {
+    width: 95%;
+    margin: 0 auto;
+    min-width: 380px;
 }
-.home_page .bodycontainer {
+
+.home_page .body_container {
     padding-top: 100px;
 }
+
 .nav_buttons:hover {
     border-color: #4b3341;
 }
-@media screen and (max-width: 790px) {
+
+.hero_statement {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: rgba(75,51,65,0.81);
+    border-radius: 10px;
+    margin-top: 30vh;
+}
+
+.hero_statement p {
+    margin: 0;
+}
+
+@media screen and (max-width: 808px) {
     nav {
         height: 140px;
     }
@@ -89,15 +114,18 @@ nav {
     .nav_container {
         display: none;
     }
+
     .logo_name {
         display: none;
     }
-    .burgerselector {
+
+    .burger_selector {
         display: inline-block;
         float: right;
         margin-top: 30px;
         margin-right: 30px;
     }
+
     .logo {
         position: static;
         float: left;
