@@ -35,7 +35,7 @@ main {
 }
 
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100vw;
     margin: 0 auto;
@@ -76,7 +76,7 @@ nav {
 
 .nav_links {
     float: right;
-  }
+}
 
 nav .buttons {
     display: inline-block;
@@ -122,7 +122,7 @@ nav .buttons {
 }
 
 /*.home_page .body_container {*/
-    /*padding-top: 100px;*/
+/*padding-top: 100px;*/
 /*}*/
 
 .buttons:hover {
@@ -205,7 +205,7 @@ nav .buttons {
 }
 
 /*.coding_langs img {*/
-    /*float:left;*/
+/*float:left;*/
 /*}*/
 
 main .body_container {
