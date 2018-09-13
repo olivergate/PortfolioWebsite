@@ -260,6 +260,7 @@ main .body_container {
 .portfolio_button p {
     font-size: 2rem;
     color: #4b3341;
+    margin-top: 50px;
 }
 
 .portfolio_button:hover {
