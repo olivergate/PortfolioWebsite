@@ -67,7 +67,7 @@ nav {
 .logo {
     position: absolute;
     left: 10px;
-    top: 110px;
+    top: 90px;
     height: 8%;
     width: 8%;
     min-width: 125px;
@@ -86,8 +86,8 @@ nav .buttons {
 }
 
 #about {
-    padding-top: 70px;
-    background-color: #9bbab0;
+    padding-top: 30px;
+    background-color: #4b3341;
 }
 
 .buttons {
@@ -169,6 +169,18 @@ nav .buttons {
     display: inline-block;
     overflow: auto
 }
+
+.col70_col30 h2 {
+    font-family: 'Stalemate', cursive;
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.col70_col30 h3 {
+    font-family: 'Stalemate', cursive;
+}
+
 .col30_col70 {
     width: 19%;
     height: 100%;
@@ -191,16 +203,110 @@ nav .buttons {
     overflow: auto;
 }
 
-.coding_langs img {
-    float:left;
-}
+/*.coding_langs img {*/
+    /*float:left;*/
+/*}*/
 
 main .body_container {
     padding-top: 30px;
 }
 
+
+
 #portfolioId {
-   background-color: #4b3341;
+    background-color: #9bbab0;
+    height: 1000px;
+    padding-top: 100px;
+    padding-right: 135px;
+    padding-left: 135px;
+    padding-bottom: 100px;
+
+}
+
+.portfolio_title {
+    font-family: 'Stalemate', cursive;
+    font-size: 5rem;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.portfolio_container {
+    overflow: auto;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio_button {
+    height: 250px;
+    width: 250px;
+    border: #4b3341 solid 2px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.portfolio_button:hover {
+    background-color: #4b3341;
+}
+
+@media screen and (max-width: 1080px) {
+    .portfolio_container {
+        width: 650px;
+    }
+
+    .portfolio_button {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .portfolio_title {
+        font-size: 5rem;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .portfolio_container {
+        width: 520px;
+    }
+
+    .portfolio_button {
+        height: 250px;
+        width: 250px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .portfolio_button {
+        height: 175px;
+        width: 100%;
+    }
+    .portfolio_container {
+        width: 400px;
+    }
+
+    #portfolioId {
+
+        padding-right: 10%;
+        padding-left: 10%;
+
+    }
+}
+@media screen and (max-width: 800px) {
+    .portfolio_button {
+        height: 150px;
+        width: 100%;
+    }
+    .portfolio_container {
+        width: 300px;
+    }
+
+    #portfolioId {
+        height: fit-content;
+        padding-right: 8%;
+        padding-left: 8%;
+
+    }
 }
 
 @media screen and (max-width: 790px) {
