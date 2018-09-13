@@ -33,6 +33,9 @@ body {
 main {
     height: auto;
 }
+section {
+    height: auto;
+}
 
 nav {
     position: fixed;
