@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -101,7 +102,6 @@ nav .buttons {
     background-size: cover;
     height: 786px;
     padding-top: 200px;
-
     padding-bottom: 200px;
 }
 
@@ -109,6 +109,7 @@ nav .buttons {
     width: 80%;
     margin-left: 10vw;
     margin-right: 10vw;
+
     /*min-width: 380px;*/
 }
 
@@ -138,6 +139,8 @@ nav .buttons {
     background-color: rgba(255,255,255,0.50);
     padding-top: 35px;
     padding-bottom: 35px;
+    transition: 1.2s;
+
 }
 
 .hero_statement h2 {
@@ -156,6 +159,7 @@ nav .buttons {
     padding-top: 20px;
     font-size: 2.5rem;
     color: #e9e1c2;
+    transition: 0.8s;
 }
 
 .col70_col30 {
