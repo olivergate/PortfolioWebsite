@@ -31,11 +31,11 @@ body {
 }
 
 main {
-    height: 768px;
+    height: auto;
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100vw;
     margin: 0 auto;
@@ -338,7 +338,7 @@ footer {
     }
 
     #portfolioId {
-        height: fit-content;
+        height: auto;
         padding-right: 8%;
         padding-left: 8%;
 

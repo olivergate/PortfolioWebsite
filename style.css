@@ -31,7 +31,7 @@ body {
 }
 
 main {
-    height: 768px;
+    height: auto;
 }
 
 nav {
@@ -338,7 +338,7 @@ footer {
     }
 
     #portfolioId {
-        height: fit-content;
+        height: auto;
         padding-right: 8%;
         padding-left: 8%;
 
