@@ -100,7 +100,16 @@ nav .buttons {
     background: url("BackgroundHome.jpg") no-repeat center center;
     background-size: cover;
     height: 786px;
-    padding: 200px;
+    padding-top: 200px;
+
+    padding-bottom: 200px;
+}
+
+.home_container {
+    width: 80%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    /*min-width: 380px;*/
 }
 
 .body_container {
@@ -122,13 +131,17 @@ nav .buttons {
     font-size: 3rem;
     font-family: 'Stalemate', cursive;
     text-align: center;
-    width: 380px;
+    width: 430px;
     margin: 0 auto;
     border-radius: 10px;
     color: #1b222b;
     background-color: rgba(255,255,255,0.50);
     padding-top: 35px;
     padding-bottom: 35px;
+}
+
+.hero_statement h2 {
+    margin: 0;
 }
 
 .hero_statement p {
@@ -186,7 +199,7 @@ main .body_container {
 }
 
 
-@media screen and (max-width: 808px) {
+@media screen and (max-width: 720px) {
     nav {
         height: 140px;
     }
@@ -210,4 +223,47 @@ main .body_container {
         position: static;
         float: left;
     }
+
+    .hero_statement {
+        font-size: 2.5rem;
+        width: 330px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .hero_statement h2 {
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    .home_page .buttons {
+        width: 45vw;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+    .hero_statement {
+        font-size: 2.25rem;
+        width: 250px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .hero_statement h2 {
+        margin: 0;
+        font-size: 2.6rem;
+    }
+
+    .home_page .buttons {
+        /*width: 45vw;*/
+        font-size: 1.5rem;}
+
+    .home_container {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        /*min-width: 380px;*/
+    }
+
 }
