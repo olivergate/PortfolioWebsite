@@ -11,10 +11,7 @@ a {
 
 h3 {
     font-size: 2rem;
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
 p {
@@ -216,10 +213,7 @@ section .body_container {
 #portfolioId {
     background-color: #9bbab0;
     height: auto;
-    padding-top: 100px;
-    padding-right: 135px;
-    padding-left: 135px;
-    padding-bottom: 100px;
+    padding: 100px 135px;
 
 }
 
