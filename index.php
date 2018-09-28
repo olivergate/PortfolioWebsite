@@ -1,5 +1,6 @@
 <?php
-$db = new PDO ()
+require 'password.php';
+$db = new PDO ($hostname, $dbusername);
 
 ?>
 
