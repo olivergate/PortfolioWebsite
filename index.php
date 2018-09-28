@@ -1,10 +1,10 @@
 <?php
 require 'password.php';
+require 'pull_data.php';
 $db = new PDO ($hostname, $dbusername);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$query = $db->prepare("SELECT `content` FROM `text_input` WHERE `location_description`='hero_statement';");
-$result = $query->fetchAll();
+
 
 ?>
 
@@ -26,7 +26,7 @@ $result = $query->fetchAll();
             <div class="hero_statement">
 
                 <h2>Oliver Kaikane Gate</h2><p>Full-stack Web development</p>
-                        <p><?php echo $result; ?></p>
+                        <p><?php text_input('hero_statement', $db); ?></p>
 
             </div>
              <div class="buttons"> <a href="#about"> How can I help </a> </div>
@@ -60,9 +60,7 @@ $result = $query->fetchAll();
          <div class="body_container">
              <div class="col70_col30">
                  <h2>About</h2>
-                 <p>
-                     Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology.
-                 <p>
+                 <p><?php text_input('about_part1', $db) ?><p>
                      Oliver is a junior developer training at Mayden Academy, Bath. He enjoys long walks in the woods and occasionally a calvados by the fireside. One day he hopes to develop for a friendly local independent coding company to hone his skills and develop professionaly within. </p>
                  </p>
                  <h3>Skill set</h3>
