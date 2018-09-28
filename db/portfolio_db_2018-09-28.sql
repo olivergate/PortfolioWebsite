@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio_db
-# Generation Time: 2018-09-28 14:57:15 +0000
+# Generation Time: 2018-09-28 15:06:13 +0000
 # ************************************************************
 
 
@@ -29,9 +29,9 @@ CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `project_name` varchar(255) DEFAULT NULL,
   `image_file_name` varchar(255) DEFAULT NULL,
-  `visibilty` tinyint(1) DEFAULT '1',
-  `hover_text` varchar(255) DEFAULT NULL,
-  `project_url` varchar(255) DEFAULT NULL,
+  `visibilty` tinyint(1) unsigned DEFAULT '1',
+  `hover_text` varchar(10000) DEFAULT NULL,
+  `project_url` varchar(555) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -45,9 +45,9 @@ DROP TABLE IF EXISTS `text_input`;
 CREATE TABLE `text_input` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `location_description` varchar(255) DEFAULT NULL,
-  `visibility` tinyint(1) NOT NULL DEFAULT '1',
+  `visibility` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `content` varchar(10000) DEFAULT NULL,
-  `url_name` int(11) DEFAULT NULL,
+  `url_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
