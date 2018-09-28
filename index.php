@@ -3,7 +3,8 @@ require 'password.php';
 $db = new PDO ($hostname, $dbusername);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$query = $db->prepare()
+$query = $db->prepare("SELECT `content` FROM `text_input` WHERE `location_description`='hero_statement';");
+$result = $query->fetchAll();
 
 ?>
 
@@ -25,7 +26,7 @@ $query = $db->prepare()
             <div class="hero_statement">
 
                 <h2>Oliver Kaikane Gate</h2><p>Full-stack Web development</p>
-                        <p>Transperancy in Design</p>
+                        <p><?php echo $result; ?></p>
 
             </div>
              <div class="buttons"> <a href="#about"> How can I help </a> </div>
