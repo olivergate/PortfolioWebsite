@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio_db
-# Generation Time: 2018-09-28 13:50:15 +0000
+# Generation Time: 2018-09-28 14:22:45 +0000
 # ************************************************************
 
 
@@ -35,15 +35,6 @@ CREATE TABLE `portfolio` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `portfolio` WRITE;
-/*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
-
-INSERT INTO `portfolio` (`id`, `project_name`, `image_file_name`, `visibilty`, `hover_text`, `project_url`)
-VALUES
-	(1,'blackjack','blackjack.jpg',1,'This is a blackjack game that I made','/sites/blackjack');
-
-/*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table text_input
@@ -65,7 +56,7 @@ LOCK TABLES `text_input` WRITE;
 
 INSERT INTO `text_input` (`id`, `location_description`, `visibility`, `content`, `url_name`)
 VALUES
-	(1,'hero_statement',1,'This is a hero statemnt',NULL);
+	(1,'hero_statement',1,'Transparency in Design',NULL);
 
 /*!40000 ALTER TABLE `text_input` ENABLE KEYS */;
 UNLOCK TABLES;
