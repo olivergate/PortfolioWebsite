@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio_db
-# Generation Time: 2018-09-28 14:22:45 +0000
+# Generation Time: 2018-10-01 09:02:43 +0000
 # ************************************************************
 
 
@@ -29,9 +29,9 @@ CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `project_name` varchar(255) DEFAULT NULL,
   `image_file_name` varchar(255) DEFAULT NULL,
-  `visibilty` tinyint(1) DEFAULT '1',
-  `hover_text` varchar(255) DEFAULT NULL,
-  `project_url` varchar(255) DEFAULT NULL,
+  `visibilty` tinyint(1) unsigned DEFAULT '1',
+  `hover_text` varchar(10000) DEFAULT NULL,
+  `project_url` varchar(555) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -45,9 +45,9 @@ DROP TABLE IF EXISTS `text_input`;
 CREATE TABLE `text_input` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `location_description` varchar(255) DEFAULT NULL,
-  `visibility` tinyint(1) NOT NULL DEFAULT '1',
+  `visibility` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `content` varchar(10000) DEFAULT NULL,
-  `url_name` int(11) DEFAULT NULL,
+  `url_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -56,7 +56,8 @@ LOCK TABLES `text_input` WRITE;
 
 INSERT INTO `text_input` (`id`, `location_description`, `visibility`, `content`, `url_name`)
 VALUES
-	(1,'hero_statement',1,'Transparency in Design',NULL);
+	(1,'hero_statement',1,'Transparency in Design',NULL),
+	(2,'about_part1',1,'Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology.',NULL);
 
 /*!40000 ALTER TABLE `text_input` ENABLE KEYS */;
 UNLOCK TABLES;
