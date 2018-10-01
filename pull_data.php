@@ -1,24 +1,29 @@
 <?php
-
+require 'password.php';
 
 /** function that pulls data from the database and returns it as a string for use on the front end
- * @param string $location_description - this correlate to the database entry under "location_description" in the text_input section.
+ *
+ * @param string $fieldname. Selects the fieldname that is being slected from
  * @param $db the linked object that holds the database
  *
- * @return string The content fromt he database as a string to be echoes into the html.
+ * @return array The content as an array
  */
-function text_input(string $location_description, $db) : string {
-    $query = $db->prepare("SELECT `content` FROM `text_input` WHERE `location_description`='$location_description';");
+function content_collect(string $fieldName, $db) : array {
+    $query = $db->prepare("SELECT `$fieldName` FROM `text_input`;");
     $query -> execute();
-    $result = $query->fetch();
-    return $result['content'];
+    $result = $query->fetchAll();
+    return $result;
 }
 
 
 $db = new PDO ($hostname, $dbusername);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$hero_statement = text_input('hero_statement', $db);
-$about_me1 = text_input('about_part1', $db);
+$text_input = content_collect('content', $db);
+var_dump($text_input);
+echo '<br><br><br><br>';
+echo $text_input[0]['content'];
+//$hero_statement = text_input('hero_statement', $db);
+//$about_me1 = text_input('about_part1', $db);
 
 
