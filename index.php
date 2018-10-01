@@ -1,5 +1,5 @@
 <?php
-//require 'pull_data.php';
+require 'pull_data.php';
 
 ?>
 

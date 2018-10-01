@@ -34,13 +34,8 @@ function content_picker(string $location_id, array $database_pull) : string {
 $db = new PDO ($hostname, $dbusername);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$text_input = content_collect('location_description','content', $db);
-var_dump($text_input);
-echo count($text_input);
-echo content_picker('hero_statement', $text_input);
-echo '<br><br><br><br>';
+$content_array = content_collect('location_description','content', $db);
 
-$hero_statement = content_picker('hero_statement', $text_input);
-$about_me1 = content_picker('about_me1', $text_input);
-echo $about_me1;
+$hero_statement = content_picker('hero_statement', $content_array);
+$about_me1 = content_picker('about_me1', $content_array);
 
