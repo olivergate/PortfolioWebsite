@@ -8,22 +8,39 @@ require 'password.php';
  *
  * @return array The content as an array
  */
-function content_collect(string $fieldName, $db) : array {
-    $query = $db->prepare("SELECT `$fieldName` FROM `text_input`;");
+function content_collect(string $key_field_name, string $fieldName, PDO $db) : array {
+    $query = $db->prepare("SELECT `$key_field_name`, `$fieldName` FROM `text_input`;");
     $query -> execute();
     $result = $query->fetchAll();
     return $result;
 }
 
+/**This function sifts through an array of database results and picks out a value according to that location
+ *
+ * @param string $location_id This is the description of where the content will go and correlates tot he database entry location_description
+ * @param array $database_pull this is the array which holds the pull from the database 'portfolio'
+ *
+ * @return string pull out the text which is in the database
+ */
+function content_picker(string $location_id, array $database_pull) : string {
+    foreach ($database_pull as $row) {
+        if($row['location_description'] == $location_id) {
+            $text_content = $row['content'];
+        }
+        return $text_content;
+    }
+}
 
 $db = new PDO ($hostname, $dbusername);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$text_input = content_collect('content', $db);
+$text_input = content_collect('location_description','content', $db);
 var_dump($text_input);
+
+echo content_picker('hero_statement', $text_input);
 echo '<br><br><br><br>';
 echo $text_input[0]['content'];
-//$hero_statement = text_input('hero_statement', $db);
-//$about_me1 = text_input('about_part1', $db);
+$hero_statement = content_picker('hero_statement', $text_input);
+$about_me1 = content_picker('about_me1', $text_input);
 
 
