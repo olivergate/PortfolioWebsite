@@ -6,7 +6,7 @@
  * Date: 01/10/2018
  * Time: 09:02
  */
-$hero_statement_new = $_POST
+require 'pull_data.php';
 
 ?>
 
@@ -23,8 +23,8 @@ $hero_statement_new = $_POST
 <body>
     <main>
         <div class="form_container">
-            <textarea rows="4" cols="30" name="hero_statement" form="about_me">THIS IS SOME teXT TO OVERWRITE</textarea>
-            <form action="index.php" id="about_me" method="post">
+            <textarea rows="4" cols="30" name="hero_statement" form="about_me"><?php echo $hero_statement ?></textarea>
+            <form action="edit_page.php" id="about_me" method="post">
 
                 <input type="submit"/>
             </form>
