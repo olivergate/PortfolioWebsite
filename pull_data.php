@@ -23,6 +23,7 @@ function content_collect(string $key_field_name, string $fieldName, PDO $db) : a
  * @return string pull out the text which is in the database
  */
 function content_picker(string $location_id, array $database_pull) : string {
+
     $numeric_identifier = 0;
     foreach ($database_pull as $row) {
         if($row['location_description'] == $location_id) {
