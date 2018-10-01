@@ -23,12 +23,19 @@ function content_collect(string $key_field_name, string $fieldName, PDO $db) : a
  * @return string pull out the text which is in the database
  */
 function content_picker(string $location_id, array $database_pull) : string {
+    $numeric_identifier = 0;
     foreach ($database_pull as $row) {
         if($row['location_description'] == $location_id) {
             $text_content = $row['content'];
+        } else {
+            $numeric_identifier ++;
         }
-        return $text_content;
     }
+    echo $numeric_identifier;
+    if ($numeric_identifier === count($database_pull)) {
+        return $text_content= 'Error';
+    } else
+    return $text_content;
 }
 
 $db = new PDO ($hostname, $dbusername);
@@ -36,11 +43,11 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 $text_input = content_collect('location_description','content', $db);
 var_dump($text_input);
-
+echo count($text_input);
 echo content_picker('hero_statement', $text_input);
 echo '<br><br><br><br>';
-echo $text_input[0]['content'];
+
 $hero_statement = content_picker('hero_statement', $text_input);
 $about_me1 = content_picker('about_me1', $text_input);
-
+echo $about_me1;
 
