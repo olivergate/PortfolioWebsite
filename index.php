@@ -22,7 +22,7 @@ require 'pull_data.php';
             <div class="hero_statement">
 
                 <h2>Oliver Kaikane Gate</h2><p>Full-stack Web development</p>
-                        <p><?php echo text_input('hero_statement', $db); ?></p>
+                        <p><?php echo $hero_statement; ?></p>
 
             </div>
              <div class="buttons"> <a href="#about"> How can I help </a> </div>
@@ -56,7 +56,7 @@ require 'pull_data.php';
          <div class="body_container">
              <div class="col70_col30">
                  <h2>About</h2>
-                 <p><?php echo text_input('about_part1', $db); ?><p>
+                 <p><?php echo $about_me1; ?><p>
                      Oliver is a junior developer training at Mayden Academy, Bath. He enjoys long walks in the woods and occasionally a calvados by the fireside. One day he hopes to develop for a friendly local independent coding company to hone his skills and develop professionaly within. </p>
                  </p>
                  <h3>Skill set</h3>

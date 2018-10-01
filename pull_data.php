@@ -1,6 +1,5 @@
 <?php
-$db = new PDO ($hostname, $dbusername);
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
 
 /** function that pulls data from the database and returns it as a string for use on the front end
  * @param string $location_description - this correlate to the database entry under "location_description" in the text_input section.
@@ -14,4 +13,12 @@ function text_input(string $location_description, $db) : string {
     $result = $query->fetch();
     return $result['content'];
 }
+
+
+$db = new PDO ($hostname, $dbusername);
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+$hero_statement = text_input('hero_statement', $db);
+$about_me1 = text_input('about_part1', $db);
+
 
