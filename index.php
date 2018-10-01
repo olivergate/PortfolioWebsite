@@ -1,6 +1,5 @@
 <?php
-require 'password.php';
-require 'pull_data.php';
+//require 'pull_data.php';
 
 ?>
 
