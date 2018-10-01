@@ -28,8 +28,8 @@ require 'pull_data.php';
         </div>
      </div>
      <nav>
-         <img src="logo.png" class="logo"/>
-         <img class="burger_selector" src="burger2.png">
+         <img src="img/logo.png" class="logo"/>
+         <img class="burger_selector" src="img/burger2.png">
          <div class="nav_container">
              <div class="logo_name">
                  OKG Web Development
