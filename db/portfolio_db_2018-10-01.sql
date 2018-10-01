@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio_db
-# Generation Time: 2018-10-01 09:02:43 +0000
+# Generation Time: 2018-10-01 14:09:16 +0000
 # ************************************************************
 
 
@@ -57,7 +57,7 @@ LOCK TABLES `text_input` WRITE;
 INSERT INTO `text_input` (`id`, `location_description`, `visibility`, `content`, `url_name`)
 VALUES
 	(1,'hero_statement',1,'Transparency in Design',NULL),
-	(2,'about_part1',1,'Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology.',NULL);
+	(2,'about_me1',1,'Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology.',NULL);
 
 /*!40000 ALTER TABLE `text_input` ENABLE KEYS */;
 UNLOCK TABLES;

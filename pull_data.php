@@ -3,8 +3,9 @@ require 'password.php';
 
 /** function that pulls data from the database and returns it as a string for use on the front end
  *
- * @param string $fieldname. Selects the fieldname that is being slected from
- * @param $db the linked object that holds the database
+ * @param string $key_field_name. Selects the fieldname that is being slected from whch will represent the key.
+ * @param string $fieldName. Selects the fieldname that is being slected from
+ * @param PDO $db linked object that holds the database
  *
  * @return array The content as an array
  */
