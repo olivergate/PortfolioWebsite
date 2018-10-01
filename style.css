@@ -96,7 +96,7 @@ nav .buttons {
 }
 
 .home_page {
-    background: url("BackgroundHome.jpg") no-repeat center center;
+    background: url("img/BackgroundHome.jpg") no-repeat center center;
     background-size: cover;
     height: 786px;
     padding-top: 200px;
