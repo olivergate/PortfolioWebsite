@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;;
+    transition: 0.5s;
+}
+body {
+    font-family: 'Italiana', serif;
+    font-size: 20px;
+    margin: 0;
+
+}
+main {
+    width: 500px;
+    margin: 0 auto;
+
+}
+.form_container {
+    background-color: #E9E1C2;
+    width: 90%;
+    border-radius: 10px;
+}
