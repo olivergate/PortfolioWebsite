@@ -9,11 +9,9 @@ require 'password.php';
  *
  * @return array The content as an array
  */
-function content_collect(string $key_field_name, string $fieldName, PDO $db) : array {
-    $query = $db->prepare("SELECT `$key_field_name`, `$fieldName` FROM `text_input`;");
-    $query->bindParam('key_name', $key_field_name);
-    $query->bindParam('field_name', $fieldName);
-    $query -> execute();
+function content_collect(string $key_field_name, string $field_name, PDO $db) : array {
+    $query = $db->prepare("SELECT $key_field_name, $field_name FROM `text_input`;");
+    $query->execute();
     $result = $query->fetchAll();
     return $result;
 }
