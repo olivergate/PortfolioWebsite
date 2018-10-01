@@ -22,8 +22,8 @@ $hero_statement_new = $_POST
 <body>
     <main>
         <div class="form_container">
-            <form action="index.php" method="post">
-                <input type="text" name="hero_statement" value="<?php echo $hero_statement; ?>" />
+            <form action="index.php" id="about_me" method="post">
+                <textarea name="hero_statement" form="about_me"><?php echo $hero_statement; ?></textarea>
                 <input type="submit"/>
             </form>
         </div>
