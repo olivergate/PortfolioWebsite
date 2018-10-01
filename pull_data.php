@@ -23,20 +23,12 @@ function content_collect(string $key_field_name, string $fieldName, PDO $db) : a
  * @return string pull out the text which is in the database
  */
 function content_picker(string $location_id, array $database_pull) : string {
-
-    $numeric_identifier = 0;
     foreach ($database_pull as $row) {
-        if($row['location_description'] == $location_id) {
-            $text_content = $row['content'];
-        } else {
-            $numeric_identifier ++;
+        if(array_search($location_id, $row)) {
+            return $row['content'];
         }
     }
-    echo $numeric_identifier;
-    if ($numeric_identifier === count($database_pull)) {
-        return $text_content= 'Error';
-    } else
-    return $text_content;
+    return 'Error';
 }
 
 $db = new PDO ($hostname, $dbusername);
