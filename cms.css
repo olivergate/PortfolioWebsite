@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;;
+    transition: 0.5s;
+}
+body {
+    font-family: 'Italiana', serif;
+    font-size: 20px;
+    margin: 0;
+}
+a {
+    font-style: inherit;
+}
+
+main {
+    width: 500px;
+    margin: 0 auto;
+
+}
+.congrats {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+.form_container {
+    background-color: #E9E1C2;
+    width: 90%;
+    border-radius: 10px;
+}
