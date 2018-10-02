@@ -14,7 +14,9 @@ echo push_data($about_me1_new, 'about_me1', $db);
 </head>
 <body>
     <div class="congrats">
-        <a href="cms.php"> SUBMISSION COMPLETE RETURN TO CMS BY CLICKING HERE</a>
+        <a href="cms.php"> RETURN TO CMS BY CLICKING HERE</a>
+        <a href="index.php"> RETURN TO FRONT-END BY CLICKING HERE</a>
+
     </div>
 </body>
 </html>
