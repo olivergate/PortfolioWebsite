@@ -13,8 +13,8 @@ echo push_data($about_me1_new, 'about_me1', $db);
     <link rel="stylesheet" type="text/css" href="cms.css" />
 </head>
 <body>
-<div class="congrats">
-    <a href="cms.php"> SUBMISSION COMPLETE RETURN TO CMS BY CLICKING HERE</a>
-</div>
+    <div class="congrats">
+        <a href="cms.php"> SUBMISSION COMPLETE RETURN TO CMS BY CLICKING HERE</a>
+    </div>
 </body>
 </html>
