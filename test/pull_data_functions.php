@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 require '../pull_data.php';
 
-class StackTest extends TestCase
+class PullDataFunctionsTest extends TestCase
 {
     //success
     public function test_pull_data_extract()
@@ -34,6 +34,26 @@ class StackTest extends TestCase
         $case = content_picker($input, $exampleResultsArray);
         $this->assertEquals($case, $expected);
     }
+
+
+    //failure
+    public function test_display_portfolio_null_fail()
+    {
+
+        $expected = false;
+        $input = null;
+        $case = display_portfolio($input);
+        $this->assertEquals($case, $expected);
+    }
+    public function test_display_portfolio_numeric_fail()
+    {
+
+        $expected = false;
+        $input = 1;
+        $case = display_portfolio($input);
+        $this->assertEquals($case, $expected);
+    }
+
 }
 
 
