@@ -23,11 +23,12 @@ require 'pull_data.php';
 <body>
     <main>
         <div class="form_container">
-            <textarea rows="4" cols="30" name="hero_statement" form="about_me"><?php echo $hero_statement ?></textarea>
-            <form action="edit_page.php" id="about_me" method="post">
-
+            <h3>Hero Statement</h3><textarea rows="4" cols="30" name="hero_statement" form="text_edit"><?php echo $hero_statement ?></textarea><br>
+            <h3>About me</h3><textarea rows="4" cols="30" name="about_me1" form="text_edit"><?php echo $about_me1 ?></textarea>
+            <form action="edit_page.php" id="text_edit" method="post">
                 <input type="submit"/>
             </form>
+
         </div>
     </main>
 </body>
