@@ -30,3 +30,18 @@ function content_picker(string $location_id, array $database_pull) : string {
     }
     return 'Error';
 }
+
+/**Pulls in all information about an specific portfolio item as ana array based on  it's id.
+ *
+ * @param int $id Hard coded input that relates to the id number within the data base
+ * @param PDO $db The database object that contains the necessary data
+ *
+ * @return array returned array showing containing all the necessary information. the array format is:
+ * (that correlate to the field names) [id, visibility, project_name, image_file_name, hover_text, project_url]
+ */
+function portfolio_collect(int $id, PDO $db) : array {
+    $query = $db->prepare("SELECT * FROM `portfolio` WHERE `id` = $id;");
+    $query->execute();
+    $result = $query->fetchAll();
+    return $result;
+}

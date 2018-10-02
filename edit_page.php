@@ -8,8 +8,9 @@ echo push_data($hero_statement_new, 'hero_statement', $db);
 echo push_data($about_me1_new, 'about_me1', $db);
 ?>
 
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="cms.css" />
 </head>
 <body>

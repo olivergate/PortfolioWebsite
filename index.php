@@ -79,42 +79,16 @@ require 'pull_data.php';
                 Portfolio
          </div>
             <div class="portfolio_container">
-                <div class="portfolio_button">
-                    <p>Css Replicated Logo</p>
-                    <a href="https://dev.maydenacademy.co.uk/students/2018/oliverg/Logo/"><h3>Have a look here</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 2</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 3</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 4</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 5</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 6</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 7</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 8</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 9</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
+
+                <?php display_portfolio($portfolio_1); ?>
+                <?php display_portfolio($portfolio_2); ?>
+                <?php display_portfolio($portfolio_3); ?>
+                <?php display_portfolio($portfolio_4); ?>
+                <?php display_portfolio($portfolio_5); ?>
+                <?php display_portfolio($portfolio_6); ?>
+                <?php display_portfolio($portfolio_7); ?>
+                <?php display_portfolio($portfolio_8); ?>
+                <?php display_portfolio($portfolio_9); ?>
 
 
 
