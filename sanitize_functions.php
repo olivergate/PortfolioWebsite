@@ -4,14 +4,15 @@
  * rid of any special characters that could effect php or html or sql.
  *
  * @param string $input_string the string which requires sensitization
- * @return bool false if the sensitization fails
+ * @return bool|string either a cleansed string or a boolean
  */
-function clean_string(string $input_string) : bool {
-    if (is_string($input_string)===true && strlen($input_string)<255) {
+function clean_string(string $input_string) {
+    if (is_string($input_string)===true) {
         $sanitised_string = filter_var($input_string, FILTER_SANITIZE_STRING);
         trim($sanitised_string);
         return $sanitised_string;
-    } else return false;
+    }
+    return false;
 }
 
 
@@ -27,6 +28,7 @@ function clean_date(string $input_date) {
     if (strlen($exploded_array[0])==4 && strlen($exploded_array[1])==2 &&strlen($exploded_array[2])==2) {
         $clean_date = [$exploded_array[0] . '-' . $exploded_array[1] . '-' . $exploded_array[2], true];
         return $clean_date;
-    } else
+    }
         return false;
 }
+
