@@ -80,18 +80,7 @@ require 'pull_data.php';
          </div>
             <div class="portfolio_container">
 
-                <?php display_portfolio($portfolio_1); ?>
-                <?php display_portfolio($portfolio_2); ?>
-                <?php display_portfolio($portfolio_3); ?>
-                <?php display_portfolio($portfolio_4); ?>
-                <?php display_portfolio($portfolio_5); ?>
-                <?php display_portfolio($portfolio_6); ?>
-                <?php display_portfolio($portfolio_7); ?>
-                <?php display_portfolio($portfolio_8); ?>
-                <?php display_portfolio($portfolio_9); ?>
-
-
-
+                <?php display_portfolio($portfolio_db); ?>
 
             </div>
      </section>

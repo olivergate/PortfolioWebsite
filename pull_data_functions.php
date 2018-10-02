@@ -39,9 +39,31 @@ function content_picker(string $location_id, array $database_pull) : string {
  * @return array returned array showing containing all the necessary information. the array format is:
  * (that correlate to the field names) [id, visibility, project_name, image_file_name, hover_text, project_url]
  */
-function portfolio_collect(int $id, PDO $db) : array {
-    $query = $db->prepare("SELECT * FROM `portfolio` WHERE `id` = $id;");
+function portfolio_collect(PDO $db) : array {
+    $query = $db->prepare("SELECT * FROM `portfolio`;");
     $query->execute();
     $result = $query->fetchAll();
     return $result;
+}
+
+/**function that loops through an array and echoes out the full html script (with specifics according to the data in the row it is
+ * displaying).
+ *
+ * @param array $portfolio_array an array that holds the data from a database
+ * @return bool false iff there is no array put in.
+ */
+function display_portfolio(array $portfolio_array) {
+    if (is_array($portfolio_array)) {
+        foreach ($portfolio_array as $row) {
+            if ($row['delete']) {
+                echo '<div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
+                echo '<p>' . $row['project_name'] . '</p>';
+                echo '<a href=' . $row['project_url'] . '><h3>Have a look here</h3></a>';
+                echo '</div>';
+
+            }
+        }
+    } else {
+        return false;
+    }
 }
