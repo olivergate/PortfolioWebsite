@@ -19,8 +19,8 @@ class StackTest extends TestCase
     public function test_numeric_extract_fail()
     {
 
-        $expected = 'Error';
-        $input = 5;
+        $expected = '55';
+        $input = 55;
         $case = clean_string($input);
         $this->assertEquals($case, $expected);
     }
@@ -36,11 +36,11 @@ class StackTest extends TestCase
     }
 
 //success
-    public function test_spechial_chars_success()
+    public function test_special_chars_success()
     {
 
-        $expected = 'THIS';
-        $input = '<><><>??>><THIS';
+        $expected = 'THISHEAD';
+        $input = 'THIS<h1><h2>HEAD';
         $case = clean_string($input);
         $this->assertEquals($case, $expected);
     }

@@ -32,3 +32,4 @@ function clean_date(string $input_date) {
         return false;
 }
 
+echo clean_string(5);
