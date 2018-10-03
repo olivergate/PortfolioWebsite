@@ -81,21 +81,22 @@ function display_portfolio_info(array $portfolio_array) {
             //displays text box to the right of the portfolio item with editable gear
 
             $result .= '<div class="portfolio_display_text">';
-            $result .= '<br>Title = <textarea rows="1"  name="title_' . $row['id'] . '" form="text_edit">' . $row['project_name'] . '</textarea><br>';
-            $result .= '<br>Id (position) = <textarea rows="1"  name="id_' . $row['id'] . '" form="text_edit">' . $row['id'] . '</textarea><br>';
-            $result .= 'CHANGES TO ID NUMBERS MUST CONSDER UNIQUENESS<br>';
-            $result .= '<br>URL = <textarea rows="1" name="url_' . $row['id'] . '" form="text_edit">' . $row['project_url'] . '</textarea>';
-            $result .= '<br>  Image file name = <textarea rows="1" name="image_' . $row['id'] . '" form="text_edit">' . $row['image_file_name'] . '</textarea>';
-            $result .= '<br>Hover text = <textarea rows="1" name="hover_' . $row['id'] . '" form="text_edit">' . $row['hover_text'] . '</textarea>';
-            $result .= '<br>Visibility = <textarea rows="1" name="visibility_' . $row['id'] . '" form="text_edit">' . $row['delete'] . '</textarea>';
+            $result .= 'Title = <textarea rows="1"  name="title" form="portfolio_edit' . $row['id'] . '">' . $row['project_name'] . '</textarea><br>';
+            $result .= 'Id (position) = ' . $row['id'] . '<br>';
+            $result .= '<br>URL = <textarea rows="1" name="url" form="portfolio_edit' . $row['id'] . '">' . $row['project_url'] . '</textarea>';
+            $result .= '<br>  Image file name = <textarea rows="1" name="image_path" form="portfolio_edit' . $row['id'] . '">' . $row['image_file_name'] . '</textarea>';
+            $result .= '<br>Hover text = <textarea rows="1" name="hover" form="portfolio_edit' . $row['id'] . '">' . $row['hover_text'] . '</textarea>';
+            $result .= '<br>Visibility = <textarea rows="1" name="visibility" form="portfolio_edit' . $row['id'] . '">' . $row['delete'] . '</textarea>';
             if ($row['delete']==1) {
-                $result .= '<br>This item is displayed on the Front-end</div>';
+                $result .= '<br>This item is displayed on the Front-end';
             } else {
-                $result .= '<br>This item DOES NOT display on the Front-end (value 0)</div>';
+                $result .= '<br>This item DOES NOT display on the Front-end (value 0)';
             }
+            $result .= '<form method="post" id="portfolio_edit' . $row['id'] . '" action="portfolio_edit.php">';
+            $result .= '<br><input name="id" type="hidden" value="' . $row['id'] . '"/>';
+            $result .= '<br><input type="submit"/></form></div>';
         }
-        $result .= '<form method="post" name="portfolio_edit" action="push_data.php" id="portfolio_edit">';
-        $result .= '<input type="submit"/></form>';
+
         return $result;
     } else {
         return 'Display info Function not a recognisable array';

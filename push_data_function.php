@@ -30,3 +30,18 @@ function portfolio_push(string $post_title, string $post_img_name, string $post_
         return "Error, no portfolio item created, check entries";
     }
 }
+function portfolio_edit(string $post_title, string $post_img_name, string $post_hover, string $post_url, string $post_visibility, string $post_id, $db) : string
+{
+    $query_update = $db->prepare("UPDATE `portfolio` SET `project_name` = :title, `image_file_name` = :img_name, `hover_text` = :hover, `project_url` = :url, `delete` = :visibility WHERE `id` = :id ;");
+    $query_update->bindParam(':title', $post_title);
+    $query_update->bindParam(':img_name', $post_img_name);
+    $query_update->bindParam(':hover', $post_hover);
+    $query_update->bindParam(':url', $post_url);
+    $query_update->bindParam(':id', $post_id);
+    $query_update->bindParam(':visibility', $post_visibility);
+    if ($query_update->execute()) {
+        return "Update complete";
+    }else {
+        return "Error with update, please check inputs";
+    }
+}
