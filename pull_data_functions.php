@@ -68,6 +68,13 @@ function display_portfolio(array $portfolio_array) {
     }
 }
 
+/**function that loops through an array and returns  the full html script and echos all the portfolio items that are
+ * in the data base on the left hand side of the front end. Included in this echo function is a cms suite
+ * which allows you to edit the information in the database which is pulling the data that is displaying
+ *
+ * @param array $portfolio_array an array that holds the data from a database
+ * @return string $result is a string with all of the html data in or an error statement
+ */
 function display_portfolio_info(array $portfolio_array) {
     if (is_array($portfolio_array)) {
         $result = '';
