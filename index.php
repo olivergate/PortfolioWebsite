@@ -80,7 +80,7 @@ require 'pull_data.php';
          </div>
             <div class="portfolio_container">
 
-                <?php display_portfolio($portfolio_db); ?>
+                <?php echo display_portfolio($portfolio_db); ?>
 
             </div>
      </section>

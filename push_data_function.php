@@ -16,3 +16,17 @@ function push_data(string $post_variable, string $location_description, $db) : s
         return "Error in Submission for " . $location_description;
     }
 }
+
+function portfolio_push(string $post_title, string $post_img_name, string $post_hover, string $post_url, $db) : string
+{
+    $query_update = $db->prepare("INSERT INTO `portfolio` (`project_name`,`image_file_name`,`hover_text`,`project_url`) VALUES (:title, :img_name, :hover, :url);");
+    $query_update->bindParam(':title', $post_title);
+    $query_update->bindParam(':img_name', $post_img_name);
+    $query_update->bindParam(':hover', $post_hover);
+    $query_update->bindParam(':url', $post_url);
+    if ($query_update->execute()) {
+        return "New portfolio item created!";
+    }else {
+        return "Error, no portfolio item created, check entries";
+    }
+}

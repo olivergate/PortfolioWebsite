@@ -34,6 +34,15 @@ require 'pull_data.php';
             <div class="_50_50_display">
                 <?php echo display_portfolio_info($portfolio_db); ?>
             </div>
+            <div>
+                <form method="post" action="portfolio_push.php" id="new_portfolio_item">
+                    <h3>Title:</h3><input type="text" name="new_title" placeholder="enter the title here"><br>
+                    <h3>Image File Name:</h3><input type="text" name="new_image_file_name" placeholder="image file name"><br>
+                    <h3>Hover text:</h3><input type="text" name="new_hover_text" placeholder="Enter hover text here"><br>
+                    <h3>URL:</h3><input type="text" name="new_url" placeholder="enter URL here"><br>
+                    <input type="submit"/>
+                </form>
+            </div>
         </div>
     </main>
 </body>
