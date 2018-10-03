@@ -12,7 +12,7 @@ a {
 }
 
 main {
-    width: 500px;
+    width: 900px;
     margin: 0 auto;
 
 }
@@ -25,4 +25,31 @@ main {
     background-color: #E9E1C2;
     width: 90%;
     border-radius: 10px;
+}
+.portfolio_cms {
+    background-color: #E9E1C2;
+    width: 100%;
+    border-radius: 10px;
+}
+._50_50_ {
+    width: 45%;
+    margin: 1%;
+    display: inline-block;
+    background-color: #4b3341;
+}
+._50_50_display {
+    width: 45%;
+    margin: 1%;
+    display: inline-block;
+    float: right;
+}
+.portfolio_button {
+    height: 250px;
+    width: 250px;
+    border: #4b3341 solid 2px;
+    text-align: center;
+    display: block;
+    border-radius: 10px;
+    margin: 3px;
+    font-family: 'Stalemate', cursive;
 }

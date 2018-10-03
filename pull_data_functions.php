@@ -31,9 +31,8 @@ function content_picker(string $location_id, array $database_pull) : string {
     return 'Error';
 }
 
-/**Pulls in all information about an specific portfolio item as ana array based on  it's id.
+/**Pulls in all information about an specific portfolio item as an array.
  *
- * @param int $id Hard coded input that relates to the id number within the data base
  * @param PDO $db The database object that contains the necessary data
  *
  * @return array returned array showing containing all the necessary information. the array format is:
@@ -46,11 +45,11 @@ function portfolio_collect(PDO $db) : array {
     return $result;
 }
 
-/**function that loops through an array and echoes out the full html script (with specifics according to the data in the row it is
- * displaying).
+/**function that loops through an array and echoes out the full html script and echos all the portfolio items that are
+ * in the data base if they have a deleted value of 1
  *
  * @param array $portfolio_array an array that holds the data from a database
- * @return bool false iff there is no array put in.
+ * @return bool false iff there is no array put in. the rest of the outputs are echos only.
  */
 function display_portfolio(array $portfolio_array) {
     if (is_array($portfolio_array)) {
@@ -62,6 +61,27 @@ function display_portfolio(array $portfolio_array) {
                 echo '</div>';
 
             }
+        }
+    } else {
+        return false;
+    }
+}
+
+function display_portfolio_info(array $portfolio_array) {
+    if (is_array($portfolio_array)) {
+        foreach ($portfolio_array as $row) {
+            echo '<div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
+            echo '<p>' . $row['project_name'] . '</p>';
+            echo '<a href=' . $row['project_url'] . '><h3>Have a look here</h3></a>';
+            echo '</div>';
+            echo '<br>URL = ' . $row['project_url'] . '<br>  Image file name = ' . $row['image_file_name'] . ' ';
+            if ($row['delete']=1) {
+                echo 'This item is displayed on the Front-end';
+            }else {
+                echo 'This item DOES NOT display on the Front-end (value 0)';
+            };
+
+
         }
     } else {
         return false;
