@@ -38,6 +38,7 @@ nav {
     margin: 0 auto;
     border-bottom: solid 2px #4b3341;
     background-color: #e9e1c2;
+    z-index: 5;
 }
 
 .nav_container {
@@ -118,10 +119,6 @@ nav .buttons {
     min-width: 380px;
 }
 
-/*.home_page .body_container {*/
-    /*padding-top: 100px;*/
-/*}*/
-
 .buttons:hover {
     border-color: #4b3341;
     background-color: rgba(75,51,65,0.34);
@@ -201,10 +198,6 @@ nav .buttons {
     overflow: auto;
 }
 
-/*.coding_langs img {*/
-    /*float:left;*/
-/*}*/
-
 section .body_container {
     padding-top: 30px;
 }
@@ -226,7 +219,7 @@ section .body_container {
 
 .portfolio_container {
     overflow: auto;
-    width: 850px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -235,15 +228,15 @@ section .body_container {
     width: 250px;
     border: #4b3341 solid 2px;
     text-align: center;
-    display: inline-block;
+    float: left;
     border-radius: 10px;
-    /*position: relative;*/
+    position: relative;
     margin: 3px;
     font-family: 'Stalemate', cursive;
+    z-index: 3;
 }
 
 .portfolio_button a {
-
     color: #9bbab0;
 }
 
@@ -260,6 +253,7 @@ section .body_container {
 .portfolio_button:hover a {
     opacity: 1;
 }
+
 .portfolio_button:hover p {
     visibility: hidden;
     transition: 0s;

@@ -43,7 +43,7 @@ function content_picker(string $location_id, array $database_pull) : string {
  * (that correlate to the field names) [id, visibility, project_name, image_file_name, hover_text, project_url]
  */
 function portfolio_collect(PDO $db) : array {
-    $query = $db->prepare("SELECT * FROM `portfolio`;");
+    $query = $db->prepare("SELECT `id`, `delete`, `project_name`, `image_file_name`, `hover_text`, `project_url` FROM `portfolio`;");
     $query->execute();
     $result = $query->fetchAll();
     return $result;
@@ -59,11 +59,13 @@ function portfolio_collect(PDO $db) : array {
  */
 function display_portfolio(array $portfolio_array) {
         $result = '';
-        foreach ($portfolio_array as $row) {
-            if ($row['delete']) {
-                if (array_key_exists('image_file_name', $row) && array_key_exists('project_name', $row)
-                    && array_key_exists('project_url', $row) && array_key_exists('hover_text', $row)) {
-                    $result .= '<div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
+        foreach($portfolio_array as $row) {
+            if($row['delete']) {
+                if(array_key_exists('image_file_name', $row) &&
+                    array_key_exists('project_name', $row) &&
+                    array_key_exists('project_url', $row) &&
+                    array_key_exists('hover_text', $row)) {
+                    $result .= '<div style="background-image: url(' . $row['image_file_name'] . '); background-size:cover;" class="portfolio_button">';
                     $result .= '<p>' . $row['project_name'] . '</p>';
                     $result .= '<a href=' . $row['project_url'] . '>';
                     $result .= '<h3>' . $row['hover_text'] . ' </h3></a></div>';
@@ -86,11 +88,13 @@ function display_portfolio(array $portfolio_array) {
  */
 function display_portfolio_info(array $portfolio_array) {
     $result = '';
-    foreach ($portfolio_array as $row) {
-        if (array_key_exists('image_file_name', $row) && array_key_exists('project_name', $row)
-            && array_key_exists('project_url', $row) && array_key_exists('hover_text', $row)) {
+    foreach($portfolio_array as $row) {
+        if(array_key_exists('image_file_name', $row) &&
+            array_key_exists('project_name', $row) &&
+            array_key_exists('project_url', $row) &&
+            array_key_exists('hover_text', $row)) {
             //shows the portfolio item (same as above function
-            $result .= '<div><div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
+            $result .= '<div><div style="background-image: url(' . $row['image_file_name'] . '); background-size:cover;" class="portfolio_button">';
             $result .= '<p>' . $row['project_name'] . '</p>';
             $result .= '<a href=' . $row['project_url'] . '>';
             $result .= '<h3>' . $row['hover_text'] . ' </h3></a></div>';
@@ -106,7 +110,7 @@ function display_portfolio_info(array $portfolio_array) {
             $result .= '<br>Visibility = <textarea rows="1" name="visibility" form="portfolio_edit' . $row['id'] . '">' . $row['delete'] . '</textarea>';
             if ($row['delete'] == 1) {
                 $result .= '<br>This item is displayed on the Front-end';
-            } else {
+            } else{
                 $result .= '<br>This item DOES NOT display on the Front-end (value 0)';
             }
             $result .= '<form method="post" id="portfolio_edit' . $row['id'] . '" action="portfolio_edit.php">';

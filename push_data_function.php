@@ -10,7 +10,7 @@ function push_data(string $post_variable, string $location_description, $db) : s
 {
     $query_update = $db->prepare("UPDATE `text_input` SET `content` = :post_variable WHERE `location_description`='$location_description';");
     $query_update->bindParam(':post_variable', $post_variable);
-    if ($query_update->execute()) {
+    if($query_update->execute()) {
         return "Submission of Form for " . $location_description . " Complete <br>";
     }else {
         return "Error in Submission for " . $location_description;
@@ -33,7 +33,7 @@ function portfolio_push(string $post_title, string $post_img_name, string $post_
     $query_update->bindParam(':img_name', $post_img_name);
     $query_update->bindParam(':hover', $post_hover);
     $query_update->bindParam(':url', $post_url);
-    if ($query_update->execute()) {
+    if($query_update->execute()) {
         return "New portfolio item created!";
     }else {
         return "Error, no portfolio item created, check entries";
@@ -62,7 +62,7 @@ function portfolio_edit(string $post_title, string $post_img_name, string $post_
     $query_update->bindParam(':url', $post_url);
     $query_update->bindParam(':id', $post_id);
     $query_update->bindParam(':visibility', $post_visibility);
-    if ($query_update->execute()) {
+    if($query_update->execute()) {
         return "Update complete";
     }else {
         return "Error with update, please check inputs";
