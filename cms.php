@@ -36,6 +36,7 @@ require 'pull_data.php';
             </div>
             <div>
                 <form method="post" action="portfolio_push.php" id="new_portfolio_item">
+                    <h1>Create a new portfolio item below</h1>
                     <h3>Title:</h3><input type="text" name="new_title" placeholder="enter the title here"><br>
                     <h3>Image File Name:</h3><input type="text" name="new_image_file_name" placeholder="image file name"><br>
                     <h3>Hover text:</h3><input type="text" name="new_hover_text" placeholder="Enter hover text here"><br>
