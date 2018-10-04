@@ -1,5 +1,5 @@
 <?php
-//require 'pull_data.php';
+require 'pull_data.php';
 
 ?>
 
@@ -28,8 +28,8 @@
         </div>
      </div>
      <nav>
-         <img src="logo.png" class="logo"/>
-         <img class="burger_selector" src="burger2.png">
+         <img src="img/logo.png" class="logo"/>
+         <img class="burger_selector" src="img/burger2.png">
          <div class="nav_container">
              <div class="logo_name">
                  OKG Web Development
@@ -79,45 +79,8 @@
                 Portfolio
          </div>
             <div class="portfolio_container">
-                <div class="portfolio_button">
-                    <p>Css Replicated Logo</p>
-                    <a href="https://dev.maydenacademy.co.uk/students/2018/oliverg/Logo/"><h3>Have a look here</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 2</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 3</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 4</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 5</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 6</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 7</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 8</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
-                <div class="portfolio_button">
-                    <p>Project 9</p>
-                    <a><h3>Coming soon</h3></a>
-                </div>
 
-
-
+                <?php echo display_portfolio($portfolio_db); ?>
 
             </div>
      </section>

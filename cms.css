@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;;
+    transition: 0.5s;
+}
+
+body {
+    font-family: 'Italiana', serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+a {
+    font-style: inherit;
+}
+
+main {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.congrats {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+.form_container {
+    background-color: #E9E1C2;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.portfolio_cms {
+    background-color: #E9E1C2;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio_display_text {
+    float: right;
+    height: 250px;
+    width: 500px;
+    border: #4b3341 solid 2px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin: 3px;
+    font-family: 'Italiana', serif;
+}
+
+._50_50_display {
+    width: 100%;
+    margin: 1%;
+    display: inline-block;
+    float: right;
+}
+
+.portfolio_button {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    border: #4b3341 solid 2px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 3px;
+    font-family: 'Stalemate', cursive;
+}
+.portfolio_button a {
+
+    color: #9bbab0;
+}
+
+.portfolio_button p {
+    font-size: 2rem;
+    color: #4b3341;
+    margin-top: 50px;
+}
+
+.portfolio_button:hover {
+    background-color: #4b3341;
+}
+
+.portfolio_button:hover a {
+    opacity: 1;
+}
+.portfolio_button:hover p {
+    visibility: hidden;
+    transition: 0s;
+}
