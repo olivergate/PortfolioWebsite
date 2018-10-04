@@ -1,9 +1,6 @@
 <?php
 session_start();
-if (
-    !isset($_SESSION['admin']) ||
-    $_SESSION['admin'] != 'logged_in'
-) {
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 'logged_in') {
     header('Location: login_page.php');
 }
 
