@@ -26,7 +26,7 @@ function content_collect(string $key_field_name, string $field_name, PDO $db) : 
  * @return string pull out the text which is in the database
  */
 function content_picker(string $location_id, array $database_pull) : string {
-    foreach ($database_pull as $row) {
+    foreach($database_pull as $row) {
         if(array_search($location_id, $row)) {
             return $row['content'];
         }
