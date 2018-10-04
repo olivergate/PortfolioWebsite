@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_GET['login_fail'])) {
+    echo 'LOGIN FAILED';
+}
 ?>
 
 <html>
