@@ -9,12 +9,9 @@
  * @return bool|string either a cleansed string or a boolean
  */
 function clean_string(string $input_string) {
-    if (is_string($input_string)) {
         $sanitised_string = filter_var($input_string, FILTER_SANITIZE_STRING);
         trim($sanitised_string);
         return $sanitised_string;
-    }
-    return false;
 }
 
 
