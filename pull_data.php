@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (
+    !isset($_SESSION['admin']) ||
+    $_SESSION['admin'] != 'logged_in'
+) {
+    header('Location: login_page.php');
+}
 require 'pull_data_functions.php';
 require 'db_instantiation.php';
 

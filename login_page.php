@@ -10,8 +10,8 @@ session_start();
 <section class="form">
 
     <form action="login_pull.php" method="post">
-        <input type="text" name="Username"/>
-        <input type="password" name="Password"/>
+        <input type="text" name="username"/>
+        <input type="password" name="password"/>
         <input type="submit" />
     </form>
 
