@@ -52,20 +52,20 @@ function portfolio_collect(PDO $db) : array {
  * @return string $result is a string with all of the html data in or an error statement
  */
 function display_portfolio(array $portfolio_array) {
-    if (is_array($portfolio_array)) {
+
         $result = '';
         foreach ($portfolio_array as $row) {
-            if ($row['delete']) {
+            if ($row['delete'] && array_key_exists('image_file_name', $row) && array_key_exists('project_name', $row)
+                && array_key_exists('project_url', $row) && array_key_exists('hover_text', $row)) {
                 $result .= '<div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
                 $result .= '<p>' . $row['project_name'] . '</p>';
                 $result .= '<a href=' . $row['project_url'] . '>';
                 $result .= '<h3>' . $row['hover_text'] . ' </h3></a></div>';
+            } else {
+                return 'Display Function not a recognisable array';
             }
         }
         return $result;
-    } else {
-        return 'Display Function not a recognisable array';
-    }
 }
 
 /**function that loops through an array and returns  the full html script and echos all the portfolio items that are
@@ -79,33 +79,37 @@ function display_portfolio_info(array $portfolio_array) {
     if (is_array($portfolio_array)) {
         $result = '';
         foreach ($portfolio_array as $row) {
-            //shows the portfolio item (same as above function
-            $result .= '<div><div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
-            $result .= '<p>' . $row['project_name'] . '</p>';
-            $result .= '<a href=' . $row['project_url'] . '>';
-            $result .= '<h3>' . $row['hover_text'] . ' </h3></a></div>';
+            if (array_key_exists('image_file_name', $row) && array_key_exists('project_name', $row)
+                && array_key_exists('project_url', $row) && array_key_exists('hover_text', $row)) {
+                //shows the portfolio item (same as above function
+                $result .= '<div><div style="background-image: url(' . $row['image_file_name'] . '); background-position:cover;" class="portfolio_button">';
+                $result .= '<p>' . $row['project_name'] . '</p>';
+                $result .= '<a href=' . $row['project_url'] . '>';
+                $result .= '<h3>' . $row['hover_text'] . ' </h3></a></div>';
 
-            //displays text box to the right of the portfolio item with editable gear
+                //displays text box to the right of the portfolio item with editable gear
 
-            $result .= '<div class="portfolio_display_text">';
-            $result .= 'Title = <textarea rows="1"  name="title" form="portfolio_edit' . $row['id'] . '">' . $row['project_name'] . '</textarea><br>';
-            $result .= 'Id (position) = ' . $row['id'] . '<br>';
-            $result .= '<br>URL = <textarea rows="1" name="url" form="portfolio_edit' . $row['id'] . '">' . $row['project_url'] . '</textarea>';
-            $result .= '<br>  Image file name = <textarea rows="1" name="image_path" form="portfolio_edit' . $row['id'] . '">' . $row['image_file_name'] . '</textarea>';
-            $result .= '<br>Hover text = <textarea rows="1" name="hover" form="portfolio_edit' . $row['id'] . '">' . $row['hover_text'] . '</textarea>';
-            $result .= '<br>Visibility = <textarea rows="1" name="visibility" form="portfolio_edit' . $row['id'] . '">' . $row['delete'] . '</textarea>';
-            if ($row['delete']==1) {
-                $result .= '<br>This item is displayed on the Front-end';
+                $result .= '<div class="portfolio_display_text">';
+                $result .= 'Title = <textarea rows="1"  name="title" form="portfolio_edit' . $row['id'] . '">' . $row['project_name'] . '</textarea><br>';
+                $result .= 'Id (position) = ' . $row['id'] . '<br>';
+                $result .= '<br>URL = <textarea rows="1" name="url" form="portfolio_edit' . $row['id'] . '">' . $row['project_url'] . '</textarea>';
+                $result .= '<br>  Image file name = <textarea rows="1" name="image_path" form="portfolio_edit' . $row['id'] . '">' . $row['image_file_name'] . '</textarea>';
+                $result .= '<br>Hover text = <textarea rows="1" name="hover" form="portfolio_edit' . $row['id'] . '">' . $row['hover_text'] . '</textarea>';
+                $result .= '<br>Visibility = <textarea rows="1" name="visibility" form="portfolio_edit' . $row['id'] . '">' . $row['delete'] . '</textarea>';
+                if ($row['delete'] == 1) {
+                    $result .= '<br>This item is displayed on the Front-end';
+                } else {
+                    $result .= '<br>This item DOES NOT display on the Front-end (value 0)';
+                }
+                $result .= '<form method="post" id="portfolio_edit' . $row['id'] . '" action="portfolio_edit.php">';
+                $result .= '<br><input name="id" type="hidden" value="' . $row['id'] . '"/>';
+                $result .= '<br><input type="submit"/></form></div>';
             } else {
-                $result .= '<br>This item DOES NOT display on the Front-end (value 0)';
+                return 'Display info Function not a recognisable array';
             }
-            $result .= '<form method="post" id="portfolio_edit' . $row['id'] . '" action="portfolio_edit.php">';
-            $result .= '<br><input name="id" type="hidden" value="' . $row['id'] . '"/>';
-            $result .= '<br><input type="submit"/></form></div>';
         }
 
         return $result;
-    } else {
-        return 'Display info Function not a recognisable array';
     }
+
 }

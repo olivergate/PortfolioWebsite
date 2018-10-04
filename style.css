@@ -226,7 +226,7 @@ section .body_container {
 
 .portfolio_container {
     overflow: auto;
-    width: 800px;
+    width: 850px;
     margin: 0 auto;
 }
 
