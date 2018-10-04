@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio_db
-# Generation Time: 2018-10-01 14:09:16 +0000
+# Generation Time: 2018-10-02 15:53:38 +0000
 # ************************************************************
 
 
@@ -27,14 +27,31 @@ DROP TABLE IF EXISTS `portfolio`;
 
 CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `delete` tinyint(1) unsigned DEFAULT '1',
   `project_name` varchar(255) DEFAULT NULL,
   `image_file_name` varchar(255) DEFAULT NULL,
-  `visibilty` tinyint(1) unsigned DEFAULT '1',
   `hover_text` varchar(10000) DEFAULT NULL,
   `project_url` varchar(555) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `portfolio` WRITE;
+/*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
+
+INSERT INTO `portfolio` (`id`, `delete`, `project_name`, `image_file_name`, `hover_text`, `project_url`)
+VALUES
+	(1,1,'CSS Logo Mimic','img/mayden.jpg','Have a look','https://dev.maydenacademy.co.uk/students/2018/oliverg/Logo/'),
+	(2,1,'Coming soon','img/mayden.jpg','Coming soon',NULL),
+	(3,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
+	(4,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
+	(5,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
+	(6,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
+	(7,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
+	(8,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
+	(9,0,'Coming Soon','img/mayden.jpg','Coming Soon',NULL);
+
+/*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table text_input
@@ -56,8 +73,8 @@ LOCK TABLES `text_input` WRITE;
 
 INSERT INTO `text_input` (`id`, `location_description`, `visibility`, `content`, `url_name`)
 VALUES
-	(1,'hero_statement',1,'Transparency in Design',NULL),
-	(2,'about_me1',1,'Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology.',NULL);
+	(1,'hero_statement',1,'Transparency in design ',NULL),
+	(2,'about_me1',1,'Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology. ',NULL);
 
 /*!40000 ALTER TABLE `text_input` ENABLE KEYS */;
 UNLOCK TABLES;
