@@ -1,6 +1,13 @@
 
 <?php
 require 'pull_data.php';
+session_start();
+if (
+        !isset($_SESSION['admin']) ||
+        $_SESSION['admin'] != 'logged_in'
+) {
+    header('Location: login_page.php');
+}
 ?>
 
 <html lang="en">

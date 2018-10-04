@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (
+    !isset($_SESSION['admin']) ||
+    $_SESSION['admin'] != 'logged_in'
+) {
+    header('Location: login_page.php');
+}
 /**Updates the database with the content of the post variable depending on WHERE location_description = the given location description.
  *
  * @param string $post_variable variable stored from the $_POST

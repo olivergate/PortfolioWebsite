@@ -1,5 +1,11 @@
 <?php
-
+session_start();
+if (
+    !isset($_SESSION['admin']) ||
+    $_SESSION['admin'] != 'logged_in'
+) {
+    header('Location: login_page.php');
+}
 /**
  * function that pulls data from the database and returns it as an array to mine data from
  *
