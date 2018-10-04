@@ -41,14 +41,8 @@ LOCK TABLES `portfolio` WRITE;
 INSERT INTO `portfolio` (`id`, `delete`, `project_name`, `image_file_name`, `hover_text`, `project_url`)
 VALUES
 	(1,1,'CSS Logo Mimic','img/mayden.jpg','Have a look','https://dev.maydenacademy.co.uk/students/2018/oliverg/Logo/'),
-	(2,1,'Coming soon','img/mayden.jpg','Coming soon',NULL),
-	(3,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
-	(4,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
-	(5,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
-	(6,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
-	(7,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
-	(8,1,'Coming Soon','img/mayden.jpg','Coming Soon',NULL),
-	(9,0,'Coming Soon','img/mayden.jpg','Coming Soon',NULL);
+	(2,0,'Coming soon','img/mayden.jpg','Coming soon',NULL),
+
 
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
