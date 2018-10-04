@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio_db
-# Generation Time: 2018-10-02 15:53:38 +0000
+# Generation Time: 2018-10-04 12:23:29 +0000
 # ************************************************************
 
 
@@ -40,9 +40,7 @@ LOCK TABLES `portfolio` WRITE;
 
 INSERT INTO `portfolio` (`id`, `delete`, `project_name`, `image_file_name`, `hover_text`, `project_url`)
 VALUES
-	(1,1,'CSS Logo Mimic','img/mayden.jpg','Have a look','https://dev.maydenacademy.co.uk/students/2018/oliverg/Logo/'),
-	(2,0,'Coming soon','img/mayden.jpg','Coming soon',NULL),
-
+	(1,1,'CSS Logo','img/mayden.jpg','Have a look','https://dev.maydenacademy.co.uk/students/2018/oliverg/Logo/');
 
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -67,7 +65,7 @@ LOCK TABLES `text_input` WRITE;
 
 INSERT INTO `text_input` (`id`, `location_description`, `visibility`, `content`, `url_name`)
 VALUES
-	(1,'hero_statement',1,'Transparency in design ',NULL),
+	(1,'hero_statement',1,'Transparency in design d',NULL),
 	(2,'about_me1',1,'Having done a BA in Philosophy, Oliver has diverse lateral thinking and logical skills and is adept at concept appraisal and management which aid him as a programmer and part of a team. He aspires to study the philosophy of programming, aiming at an ethical response to the developing challenges within technology. ',NULL);
 
 /*!40000 ALTER TABLE `text_input` ENABLE KEYS */;
