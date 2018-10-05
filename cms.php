@@ -26,11 +26,11 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 'logged_in') {
             <form action="push_data.php" id="text_edit" method="post">
                 <input type="submit"/>
             </form>
-            <form enctype="multipart/form-data" action="push_data.php" method="POST">
-                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-                Send this file: <input name="portfolio_image" type="file" />
-                <input type="submit" value="Send File" />
-            </form
+<!--            <form enctype="multipart/form-data" action="push_data.php" method="POST">-->
+<!--                <input type="hidden" name="MAX_FILE_SIZE" value="30000" />-->
+<!--                Send this file: <input name="portfolio_image" type="file" />-->
+<!--                <input type="submit" value="Send File" />-->
+<!--            </form-->
 
         </div>
         <div class="portfolio_cms">
