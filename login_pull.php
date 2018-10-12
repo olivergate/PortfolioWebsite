@@ -9,6 +9,7 @@ if
     password_verify($_POST['password'], $stored_password) &&
     $_POST['username'] == $stored_username
 ) {
+
     $_SESSION['admin'] = 'logged_in';
     header('Location: cms.php');
 } else {
