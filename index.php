@@ -1,6 +1,6 @@
 <?php
 require 'pull_data.php';
-
+session_start();
 ?>
 
 
