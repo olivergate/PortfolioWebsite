@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 use PHPUnit\Framework\TestCase;
 require '../pull_data_functions.php';

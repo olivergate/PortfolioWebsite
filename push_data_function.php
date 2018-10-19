@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**Updates the database with the content of the post variable depending on WHERE location_description = the given location description.
  *
  * @param string $post_variable variable stored from the $_POST

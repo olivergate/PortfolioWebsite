@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 use PHPUnit\Framework\TestCase;
 require '../sanitize_functions.php';

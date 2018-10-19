@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'db_instantiation.php';
 require 'sanitize_functions.php';
 require 'push_data_function.php';

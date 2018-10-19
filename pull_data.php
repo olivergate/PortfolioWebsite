@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'pull_data_functions.php';
 require 'db_instantiation.php';
 

@@ -1,6 +1,6 @@
 <?php
 require 'pull_data.php';
-
+session_start();
 ?>
 
 
@@ -29,7 +29,23 @@ require 'pull_data.php';
      </div>
      <nav>
          <img src="img/logo.png" class="logo"/>
-         <img class="burger_selector" src="img/burger2.png">
+         <div id="burger_container" class="burger_container">
+             <img  id="burger"  class="burger_selector" src="img/burger2.png">
+             <div id="drop_down" class="drop_down">
+                 <div class="nav_links">
+                     <div class="buttons">
+                         <a href="#home">Home</a>
+                     </div>
+                     <div class="buttons">
+                         <a href="#portfolioId">Work</a>
+                     </div>
+                     <div class="buttons">
+                         <a href="#about">About</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
          <div class="nav_container">
              <div class="logo_name">
                  OKG Web Development
@@ -44,9 +60,6 @@ require 'pull_data.php';
                  <div class="buttons">
                      <a href="#about">About</a>
                  </div>
-                 <!--<div class="buttons">-->
-                     <!--Contact-->
-                 <!--</div>-->
              </div>
          </div>
 
@@ -94,5 +107,9 @@ require 'pull_data.php';
 
 
 </body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+<script src="burger_menu.js"></script>
 </html>
 

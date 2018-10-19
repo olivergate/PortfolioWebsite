@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /**
  * Cleans a string ready
  * Function that really makes sure that the string that is being input into the function is an actual string and gets
