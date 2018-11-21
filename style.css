@@ -37,12 +37,12 @@ nav {
     width: 100vw;
     margin: 0 auto;
     border-bottom: solid 2px #4b3341;
-    background-color: #e9e1c2;
+    background-color: #232531;
     z-index: 5;
 }
 
 .nav_container {
-    color: #8d7e55;
+    color: #e9e1c2;
     overflow: auto;
     margin: 0 auto;
     width: 90%;
@@ -86,9 +86,6 @@ nav {
     left: 10px;
     top: 90px;
     height: 125px;
-
-    /*min-width: 125px;*/
-    /*min-height: 125px;*/
 }
 
 .nav_links {
@@ -104,7 +101,8 @@ nav .buttons {
 
 #about {
     padding-top: 30px;
-    background-color: #4b3341;
+    background-image: url("img/portfolio.jpg");
+    background-size: cover;
     transition: 0.8s;
     overflow: hidden;
 }
@@ -170,12 +168,12 @@ nav .buttons {
 }
 
 .home_page .buttons {
-    font-family: 'Italiana', serif;
+    font-family: 'Stalemate', serif;
     width: 40vw;
     margin: 0 auto;
     margin-top: 25px;
     padding-top: 20px;
-    font-size: 2.5rem;
+    font-size: 6rem;
     color: #e9e1c2;
     transition: 0.8s;
 }

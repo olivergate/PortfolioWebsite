@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 /**
  * function that pulls data from the database and returns it as an array to mine data from
