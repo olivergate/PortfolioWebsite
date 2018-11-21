@@ -224,8 +224,8 @@ section .body_container {
 
 
 #portfolioId {
-    background-color: #9bbab0;
-    height: auto;
+    background: url("img/portfolioBG.jpg") no-repeat center center;
+    background-size: cover;
     padding: 100px 135px;
     transition: 0.8s;
 }
